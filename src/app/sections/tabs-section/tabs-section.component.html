@@ -1,0 +1,54 @@
+<section class="section section-lg section-shaped ">
+  <div class="shape shape-style-1 shape-default">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- SVG separator -->
+  <div class="separator separator-bottom separator-skew">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</section>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 mt-5 mt-lg-0">
+      <!-- Menu -->
+      <div class="mb-3">
+        <h2 class="mb-0">Objetivos de la empresa</h2>
+      </div>
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav1="ngbNav" [(activeId)]="active" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <a class="nav-link mt-1" ngbNavLink> Generales</a>
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <p class="mt-3">1. Desarrollar tecnologías innovadoras más allá de las hoy propuestas, para lograr un bienestar social.</p>
+                <p class="mt-3">2. Disminuir nuestra huella y emisiones de carbono en los próximos años. </p>
+                <p class="mt-3">3. Dar un impacto y servicios gratificante a las personas para ayudarlas a resolver sus problemas.</p>
+              </div>
+            </ng-template>
+          </li>
+          <li class="nav-item " [ngbNavItem]="2">
+            <a class="nav-link" ngbNavLink>Especificos</a>
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <p class="mt-3">1. Ofrecer nuestra tecnología en una accesibilidad óptima para todo público interesado. </p>
+                <p class="mt-3">2. Dar búsqueda a nuevos rubros en el mercado para lograr una expansión a nuestro(s) productos elaborados y mantener la tecnología en todo lugar.</p>
+                <p class="mt-3">3. Validar la solución tecnológica con clientes potenciales para obtener comentarios y recomendaciones.</p>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav1" class="custom-tab-content"></div>
+    </div>
+  </div>
+</div>
